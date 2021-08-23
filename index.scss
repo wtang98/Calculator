@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(to right, red, blue);
+    .calcGrid{
+        display: grid;
+        grid-template-columns: repeat(4 1fr);
+        grid-template-rows: repeat(6 1fr);
+        border: orangered solid 1px;
+        border-radius: 8px;
+        button{
+            border-radius: 8px;
+            margin: 0;
+            width: 35px;
+            height: 35px;
+            #equals{
+                grid-row: 5/7;
+                grid-column: 4;
+                background-color: darkblue;
+                color: white;
+            }
+        }
+        .output{
+            grid-column: 1/ 5;
+            grid-row: 1/1;
+            width: 140px;
+            height: 35px;
+            border: solid black 1px;
+            background-color: rgba(255, 255, 255, .5);
+            box-sizing: border-box;
+            border-radius: 8px;
+            #display{
+                width: 140px;
+                height: 35px;
+                border: solid black 1px;
+                background-color: rgba(255, 255, 255, .5);
+                box-sizing: border-box;
+                border-radius: 8px;
+                grid-column: 1/ 5;
+                grid-row: 1/1;
+            }
+        }
+        // #equals{
+        //     grid-row: 5/7;
+        //     grid-column: 4;
+        //     background-color: darkblue;
+        //     color: white;
+        // }
+        #minus{
+            background-color: blue;
+            color: white;
+        }
+        #plus{
+            background-color: blue;
+            color: white;
+        }
+        #times{
+            background-color: blue;
+            color: white;
+        }
+        #divide{
+            background-color: blue;
+            color: white;
+        }
+        #delete{
+            background-color: blue;
+            color: white;
+        }
+        #clear{
+            background-color: blue;
+            color: white;
+        }
+    }
+}

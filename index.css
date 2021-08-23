@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, red, blue);
+}
+body .calcGrid {
+  display: grid;
+  grid-template-columns: repeat(4 1fr);
+  grid-template-rows: repeat(6 1fr);
+  border: orangered solid 1px;
+  border-radius: 8px;
+}
+body .calcGrid button {
+  border-radius: 8px;
+  margin: 0;
+  width: 35px;
+  height: 35px;
+}
+body .calcGrid .output {
+  grid-column: 1/5;
+  grid-row: 1/1;
+  width: 140px;
+  height: 35px;
+  border: solid black 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+body .calcGrid .output #display {
+  width: 140px;
+  height: 35px;
+  border: solid black 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  border-radius: 8px;
+  grid-column: 1/5;
+  grid-row: 1/1;
+}
+body .calcGrid #equals {
+  grid-row: 5/7;
+  grid-column: 4;
+  background-color: darkblue;
+  color: white;
+}
+body .calcGrid #minus {
+  background-color: blue;
+  color: white;
+}
+body .calcGrid #plus {
+  background-color: blue;
+  color: white;
+}
+body .calcGrid #times {
+  background-color: blue;
+  color: white;
+}
+body .calcGrid #divide {
+  background-color: blue;
+  color: white;
+}
+body .calcGrid #delete {
+  background-color: blue;
+  color: white;
+}
+body .calcGrid #clear {
+  background-color: blue;
+  color: white;
+}
