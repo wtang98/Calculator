@@ -21,12 +21,6 @@ body{
             margin: 0;
             width: 35px;
             height: 35px;
-            #equals{
-                grid-row: 5/7;
-                grid-column: 4;
-                background-color: darkblue;
-                color: white;
-            }
         }
         .output{
             grid-column: 1/ 5;
@@ -48,12 +42,12 @@ body{
                 grid-row: 1/1;
             }
         }
-        // #equals{
-        //     grid-row: 5/7;
-        //     grid-column: 4;
-        //     background-color: darkblue;
-        //     color: white;
-        // }
+        #equals{
+            grid-row: 5/7;
+            grid-column: 4;
+            background-color: darkblue;
+            color: white;
+        }
         #minus{
             background-color: blue;
             color: white;

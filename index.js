@@ -45,11 +45,7 @@ timesButton.addEventListener("click", () =>{
         operator ="×"
     })
 
-percentButton.addEventListener("click", () =>{ 
-    firstNumberp = parseFloat(outputScreen.innerHTML);
-        outputScreen.innerHTML = "" ;
-        operator ="%"
-    })
+
 
 equalsButton.addEventListener("click", button => {
     secondNumber = parseFloat(outputScreen.innerHTML);
@@ -61,9 +57,7 @@ equalsButton.addEventListener("click", button => {
         outputScreen.innerHTML = firstNumberd / secondNumber
     }else if(operator === "×"){
         outputScreen.innerHTML = firstNumbert * secondNumber
-    }else if(operator=== "%");{
-        outputScreen.innerHTML = ((firstNumberp/secondNumber))*100
-    };
+    }
 })
 
 
