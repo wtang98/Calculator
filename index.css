@@ -18,6 +18,7 @@ body .calcGrid {
   grid-template-rows: repeat(6 1fr);
   border: orangered solid 1px;
   border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 body .calcGrid button {
   border-radius: 8px;

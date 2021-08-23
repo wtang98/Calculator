@@ -17,7 +17,6 @@ let secondNumber = "" //outputScreen.innerHTML
 numberButtons.forEach(function (button) {
     button.addEventListener("click", function (e) {
         outputScreen.innerHTML += e.target.value;
-        // e.target.value = firstNumber;
     });
 });
 
@@ -64,12 +63,9 @@ equalsButton.addEventListener("click", button => {
 clearButton.addEventListener("click", ()=> {
     outputScreen.innerHTML = " ";
 })
-
-
-
-    // deleteButton.addEventListener("click", () =>{ 
-    //     outputScreen.innerHTML--
-    // })
+deleteButton.addEventListener("click", () =>{ 
+    outputScreen.innerHTML = outputScreen.innerText.slice(0, -1);
+})
 
 
 
