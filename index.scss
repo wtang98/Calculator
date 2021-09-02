@@ -9,7 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background:linear-gradient(to right, black, darkblue);
+    background:linear-gradient(to right, darkblue, blue);
     .calcGrid{
         display: grid;
         grid-template-columns: repeat(4 1fr);

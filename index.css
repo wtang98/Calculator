@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, black, darkblue);
+  background: linear-gradient(to right, darkblue, blue);
 }
 body .calcGrid {
   display: grid;
