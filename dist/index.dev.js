@@ -10,7 +10,8 @@ var divideButton = document.querySelector("#divide");
 var addButton = document.querySelector("#plus");
 var percentButton = document.querySelector("#percent");
 var timesButton = document.querySelector("#times");
-var operand = document.querySelector(".operator");
+var firstNumber = " ";
+var secondNumber = " ";
 numberButtons.forEach(function (button) {
   button.addEventListener("click", function (e) {
     outputScreen.innerHTML += e.target.value;
@@ -18,25 +19,24 @@ numberButtons.forEach(function (button) {
 });
 addButton.addEventListener("click", function () {
   firstNumber = parseFloat(outputScreen.innerHTML);
-  outputScreen.innerHTML += "+";
+  outputScreen.innerHTML = "";
   operator = "+";
 });
 minusButton.addEventListener("click", function () {
   firstNumberm = parseFloat(outputScreen.innerHTML);
-  outputScreen.innerHTML += "-";
+  outputScreen.innerHTML = "";
   operator = "-";
 });
 divideButton.addEventListener("click", function () {
   firstNumberd = parseFloat(outputScreen.innerHTML);
-  outputScreen.innerHTML += "÷";
+  outputScreen.innerHTML = "";
   operator = "÷";
 });
 timesButton.addEventListener("click", function () {
   firstNumbert = parseFloat(outputScreen.innerHTML);
-  outputScreen.innerHTML += "×";
+  outputScreen.innerHTML = "";
   operator = "×";
-}); // const operatorM = ["×","-","÷","+"];
-
+});
 equalsButton.addEventListener("click", function () {
   secondNumber = parseFloat(outputScreen.innerHTML);
 
@@ -48,8 +48,7 @@ equalsButton.addEventListener("click", function () {
     outputScreen.innerHTML = firstNumberd / secondNumber;
   } else if (operator === "×") {
     outputScreen.innerHTML = firstNumbert * secondNumber;
-  } // else if (operator[i] < 1){}
-
+  }
 });
 clearButton.addEventListener("click", function () {
   outputScreen.innerHTML = " ";

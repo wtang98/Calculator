@@ -8,7 +8,9 @@ const divideButton = document.querySelector("#divide");
 const addButton = document.querySelector("#plus");
 const percentButton = document.querySelector("#percent");
 const timesButton = document.querySelector("#times");
-const operand = document.querySelector(".operator");
+
+let firstNumber = " "; 
+let secondNumber = " "; 
 
 numberButtons.forEach(function (button) {
     button.addEventListener("click", (e) => {
@@ -18,42 +20,39 @@ numberButtons.forEach(function (button) {
 
 addButton.addEventListener("click", () =>{ 
     firstNumber = parseFloat(outputScreen.innerHTML);
-    outputScreen.innerHTML += "+" ;
+    outputScreen.innerHTML = "" ;
     operator = "+";
 })
 
 minusButton.addEventListener("click", () =>{ 
     firstNumberm = parseFloat(outputScreen.innerHTML);
-    outputScreen.innerHTML += "-" ;
+    outputScreen.innerHTML = "" ;
     operator ="-";
 })
 
 divideButton.addEventListener("click", () =>{ 
     firstNumberd = parseFloat(outputScreen.innerHTML);
-    outputScreen.innerHTML += "÷" ;
+    outputScreen.innerHTML = "" ;
     operator ="÷"
     })
 
 timesButton.addEventListener("click", () =>{ 
     firstNumbert = parseFloat(outputScreen.innerHTML);
-        outputScreen.innerHTML += "×" ;
+        outputScreen.innerHTML = "" ;
         operator ="×"
     })
 
-    
-    // const operatorM = ["×","-","÷","+"];
 equalsButton.addEventListener("click", () => {
     secondNumber = parseFloat(outputScreen.innerHTML);
     if(operator === "+"){
-        outputScreen.innerHTML = firstNumber + secondNumber
+        outputScreen.innerHTML = firstNumber + secondNumber;
     }else if (operator === "-"){
-        outputScreen.innerHTML = firstNumberm - secondNumber
+        outputScreen.innerHTML = firstNumberm - secondNumber;
     }else if (operator === "÷"){
-        outputScreen.innerHTML = firstNumberd / secondNumber
+        outputScreen.innerHTML = firstNumberd / secondNumber;
     }else if(operator === "×"){
-        outputScreen.innerHTML = firstNumbert * secondNumber
+        outputScreen.innerHTML = firstNumbert * secondNumber;
     }
-    // else if (operator[i] < 1){}
 })
 
 clearButton.addEventListener("click", ()=> {
