@@ -18,36 +18,65 @@ numberButtons.forEach(function (button) {
   });
 });
 addButton.addEventListener("click", function () {
-  firstNumber = parseFloat(outputScreen.innerHTML);
-  outputScreen.innerHTML = "";
+  // firstNumber = parseFloat(outputScreen.innerHTML);
+  outputScreen.innerHTML += "+";
   operator = "+";
 });
 minusButton.addEventListener("click", function () {
-  firstNumberm = parseFloat(outputScreen.innerHTML);
-  outputScreen.innerHTML = "";
+  outputScreen.innerHTML += "-";
   operator = "-";
 });
 divideButton.addEventListener("click", function () {
-  firstNumberd = parseFloat(outputScreen.innerHTML);
-  outputScreen.innerHTML = "";
+  outputScreen.innerHTML += "÷";
   operator = "÷";
 });
 timesButton.addEventListener("click", function () {
-  firstNumbert = parseFloat(outputScreen.innerHTML);
-  outputScreen.innerHTML = "";
+  outputScreen.innerHTML += "×";
   operator = "×";
-});
-equalsButton.addEventListener("click", function () {
-  secondNumber = parseFloat(outputScreen.innerHTML);
+}); // equalsButton.addEventListener("click", () => {
+//     secondNumber = parseFloat(outputScreen.innerHTML);
+//     if(operator === "+"){
+//         outputScreen.innerHTML = firstNumber + secondNumber;
+//     }else if (operator === "-"){
+//         outputScreen.innerHTML = firstNumberm - secondNumber;
+//     }else if (operator === "÷"){
+//         outputScreen.innerHTML = firstNumberd / secondNumber;
+//     }else if(operator === "×"){
+//         outputScreen.innerHTML = firstNumbert * secondNumber;
+//     }
+// })
 
-  if (operator === "+") {
-    outputScreen.innerHTML = firstNumber + secondNumber;
-  } else if (operator === "-") {
-    outputScreen.innerHTML = firstNumberm - secondNumber;
-  } else if (operator === "÷") {
-    outputScreen.innerHTML = firstNumberd / secondNumber;
-  } else if (operator === "×") {
-    outputScreen.innerHTML = firstNumbert * secondNumber;
+equalsButton.addEventListener("click", function () {
+  // const adding = outputScreen.innerHTML
+  if (outputScreen.innerHTML.split("").includes("+") === true) {
+    var numArr = outputScreen.innerHTML.split("+");
+    var first = parseFloat(numArr[0]);
+    var second = parseFloat(numArr[1]);
+    outputScreen.innerHTML = first + second;
+  }
+
+  if (outputScreen.innerHTML.split("").includes("-") === true) {
+    var _numArr = outputScreen.innerHTML.split("-");
+
+    var third = parseFloat(_numArr[0]);
+    var fourth = parseFloat(_numArr[1]);
+    outputScreen.innerHTML = third - fourth;
+  }
+
+  if (outputScreen.innerHTML.split("").includes("÷") === true) {
+    var _numArr2 = outputScreen.innerHTML.split("÷");
+
+    var fifth = parseFloat(_numArr2[0]);
+    var sixth = parseFloat(_numArr2[1]);
+    outputScreen.innerHTML = fifth / sixth;
+  }
+
+  if (outputScreen.innerHTML.split("").includes("×") === true) {
+    var _numArr3 = outputScreen.innerHTML.split("×");
+
+    var sevenths = parseFloat(_numArr3[0]);
+    var eighth = parseFloat(_numArr3[1]);
+    outputScreen.innerHTML = sevenths * eighth;
   }
 });
 clearButton.addEventListener("click", function () {

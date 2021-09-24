@@ -19,39 +19,63 @@ numberButtons.forEach(function (button) {
 });
 
 addButton.addEventListener("click", () =>{ 
-    firstNumber = parseFloat(outputScreen.innerHTML);
-    outputScreen.innerHTML = "" ;
+    // firstNumber = parseFloat(outputScreen.innerHTML);
+    outputScreen.innerHTML += "+" ;
     operator = "+";
 })
 
 minusButton.addEventListener("click", () =>{ 
-    firstNumberm = parseFloat(outputScreen.innerHTML);
-    outputScreen.innerHTML = "" ;
+    outputScreen.innerHTML += "-" ;
     operator ="-";
 })
 
 divideButton.addEventListener("click", () =>{ 
-    firstNumberd = parseFloat(outputScreen.innerHTML);
-    outputScreen.innerHTML = "" ;
+    outputScreen.innerHTML += "÷" ;
     operator ="÷"
     })
 
 timesButton.addEventListener("click", () =>{ 
-    firstNumbert = parseFloat(outputScreen.innerHTML);
-        outputScreen.innerHTML = "" ;
+        outputScreen.innerHTML += "×" ;
         operator ="×"
     })
 
+// equalsButton.addEventListener("click", () => {
+//     secondNumber = parseFloat(outputScreen.innerHTML);
+//     if(operator === "+"){
+//         outputScreen.innerHTML = firstNumber + secondNumber;
+//     }else if (operator === "-"){
+//         outputScreen.innerHTML = firstNumberm - secondNumber;
+//     }else if (operator === "÷"){
+//         outputScreen.innerHTML = firstNumberd / secondNumber;
+//     }else if(operator === "×"){
+//         outputScreen.innerHTML = firstNumbert * secondNumber;
+//     }
+// })
 equalsButton.addEventListener("click", () => {
-    secondNumber = parseFloat(outputScreen.innerHTML);
-    if(operator === "+"){
-        outputScreen.innerHTML = firstNumber + secondNumber;
-    }else if (operator === "-"){
-        outputScreen.innerHTML = firstNumberm - secondNumber;
-    }else if (operator === "÷"){
-        outputScreen.innerHTML = firstNumberd / secondNumber;
-    }else if(operator === "×"){
-        outputScreen.innerHTML = firstNumbert * secondNumber;
+    // const adding = outputScreen.innerHTML
+    if(outputScreen.innerHTML.split("").includes("+") === true){
+        const numArr = outputScreen.innerHTML.split("+")
+        const first = parseFloat(numArr[0])
+        const second = parseFloat(numArr[1])
+        outputScreen.innerHTML = first + second;
+    }
+    if(outputScreen.innerHTML.split("").includes("-") === true){
+        const numArr = outputScreen.innerHTML.split("-")
+        const third = parseFloat(numArr[0])
+        const fourth = parseFloat(numArr[1])
+        outputScreen.innerHTML = third - fourth;
+    }
+    if(outputScreen.innerHTML.split("").includes("÷") === true){
+        const numArr = outputScreen.innerHTML.split("÷")
+        const fifth = parseFloat(numArr[0])
+        const sixth = parseFloat(numArr[1])
+        outputScreen.innerHTML = fifth / sixth;
+    }
+    if(outputScreen.innerHTML.split("").includes("×") === true){
+        const numArr = outputScreen.innerHTML.split("×")
+        const sevenths = parseFloat(numArr[0])
+        const eighth = parseFloat(numArr[1])
+        outputScreen.innerHTML = sevenths * eighth;
     }
 })
 
