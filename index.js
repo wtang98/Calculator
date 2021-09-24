@@ -39,18 +39,6 @@ timesButton.addEventListener("click", () =>{
         operator ="×"
     })
 
-// equalsButton.addEventListener("click", () => {
-//     secondNumber = parseFloat(outputScreen.innerHTML);
-//     if(operator === "+"){
-//         outputScreen.innerHTML = firstNumber + secondNumber;
-//     }else if (operator === "-"){
-//         outputScreen.innerHTML = firstNumberm - secondNumber;
-//     }else if (operator === "÷"){
-//         outputScreen.innerHTML = firstNumberd / secondNumber;
-//     }else if(operator === "×"){
-//         outputScreen.innerHTML = firstNumbert * secondNumber;
-//     }
-// })
 equalsButton.addEventListener("click", () => {
     // const adding = outputScreen.innerHTML
     if(outputScreen.innerHTML.split("").includes("+") === true){
