@@ -9,9 +9,6 @@ const addButton = document.querySelector("#plus");
 const percentButton = document.querySelector("#percent");
 const timesButton = document.querySelector("#times");
 
-let firstNumber = " "; 
-let secondNumber = " "; 
-
 numberButtons.forEach(function (button) {
     button.addEventListener("click", (e) => {
         outputScreen.innerHTML += e.target.value;
@@ -19,7 +16,6 @@ numberButtons.forEach(function (button) {
 });
 
 addButton.addEventListener("click", () =>{ 
-    // firstNumber = parseFloat(outputScreen.innerHTML);
     outputScreen.innerHTML += "+" ;
     operator = "+";
 })
@@ -40,7 +36,6 @@ timesButton.addEventListener("click", () =>{
     })
 
 equalsButton.addEventListener("click", () => {
-    // const adding = outputScreen.innerHTML
     if(outputScreen.innerHTML.split("").includes("+") === true){
         const numArr = outputScreen.innerHTML.split("+")
         const first = parseFloat(numArr[0])

@@ -10,15 +10,12 @@ var divideButton = document.querySelector("#divide");
 var addButton = document.querySelector("#plus");
 var percentButton = document.querySelector("#percent");
 var timesButton = document.querySelector("#times");
-var firstNumber = " ";
-var secondNumber = " ";
 numberButtons.forEach(function (button) {
   button.addEventListener("click", function (e) {
     outputScreen.innerHTML += e.target.value;
   });
 });
 addButton.addEventListener("click", function () {
-  // firstNumber = parseFloat(outputScreen.innerHTML);
   outputScreen.innerHTML += "+";
   operator = "+";
 });
@@ -35,7 +32,6 @@ timesButton.addEventListener("click", function () {
   operator = "×";
 });
 equalsButton.addEventListener("click", function () {
-  // const adding = outputScreen.innerHTML
   if (outputScreen.innerHTML.split("").includes("+") === true) {
     var numArr = outputScreen.innerHTML.split("+");
     var first = parseFloat(numArr[0]);
