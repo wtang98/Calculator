@@ -1,4 +1,6 @@
 const outputScreen = document.querySelector(".output");
+const oldInput = document.querySelector(".oldInput");
+const inputScreen = document.querySelector(".input");
 const numberButtons = document.querySelectorAll(".number");
 const equalsButton = document.querySelector("#equals");
 const deleteButton = document.querySelector("#delete");
@@ -11,62 +13,68 @@ const timesButton = document.querySelector("#times");
 
 numberButtons.forEach(function (button) {
     button.addEventListener("click", (e) => {
-        outputScreen.innerHTML += e.target.value;
+        oldInput.innerHTML = "";
+        inputScreen.innerHTML += e.target.value;
     });
 });
 
 addButton.addEventListener("click", () =>{ 
-    outputScreen.innerHTML += "+" ;
+    inputScreen.innerHTML += "+" ;
     operator = "+";
 })
 
 minusButton.addEventListener("click", () =>{ 
-    outputScreen.innerHTML += "-" ;
+    inputScreen.innerHTML += "-" ;
     operator ="-";
 })
 
 divideButton.addEventListener("click", () =>{ 
-    outputScreen.innerHTML += "÷" ;
+    inputScreen.innerHTML += "÷" ;
     operator ="÷"
     })
 
 timesButton.addEventListener("click", () =>{ 
-        outputScreen.innerHTML += "×" ;
+    inputScreen.innerHTML += "×" ;
         operator ="×"
     })
 
 equalsButton.addEventListener("click", () => {
-    if(outputScreen.innerHTML.split("").includes("+") === true){
-        const numArr = outputScreen.innerHTML.split("+")
+    oldInput.innerHTML = inputScreen.innerHTML + "=";
+    if(inputScreen.innerHTML.split("").includes("+") === true){
+        const numArr = inputScreen.innerHTML.split("+")
         const first = parseFloat(numArr[0])
         const second = parseFloat(numArr[1])
         outputScreen.innerHTML = first + second;
     }
-    if(outputScreen.innerHTML.split("").includes("-") === true){
-        const numArr = outputScreen.innerHTML.split("-")
+    if(inputScreen.innerHTML.split("").includes("-") === true){
+        const numArr = inputScreen.innerHTML.split("-")
         const third = parseFloat(numArr[0])
         const fourth = parseFloat(numArr[1])
         outputScreen.innerHTML = third - fourth;
     }
-    if(outputScreen.innerHTML.split("").includes("÷") === true){
-        const numArr = outputScreen.innerHTML.split("÷")
+    if(inputScreen.innerHTML.split("").includes("÷") === true){
+        const numArr = inputScreen.innerHTML.split("÷")
         const fifth = parseFloat(numArr[0])
         const sixth = parseFloat(numArr[1])
         outputScreen.innerHTML = fifth / sixth;
     }
-    if(outputScreen.innerHTML.split("").includes("×") === true){
-        const numArr = outputScreen.innerHTML.split("×")
+    if(inputScreen.innerHTML.split("").includes("×") === true){
+        const numArr = inputScreen.innerHTML.split("×")
         const sevenths = parseFloat(numArr[0])
         const eighth = parseFloat(numArr[1])
         outputScreen.innerHTML = sevenths * eighth;
     }
+    inputScreen.innerHTML = "";
 })
 
 clearButton.addEventListener("click", ()=> {
-    outputScreen.innerHTML = " ";
+    outputScreen.innerHTML = "";
+    inputScreen.innerHTML = "";
+    oldInput.innerHTML = "";
 })
+
 deleteButton.addEventListener("click", () =>{ 
-    outputScreen.innerHTML = outputScreen.innerText.slice(0, -1);
+    inputScreen.innerHTML = inputScreen.innerText.slice(0, -1);
 })
 
 

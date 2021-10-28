@@ -1,0 +1,31 @@
+;FFMETADATA1
+[CHAPTER]
+TIMEBASE=1/1000
+START=-2634
+END=4374
+title=The Main Page Successfully loads
+[CHAPTER]
+TIMEBASE=1/1000
+START=10692
+END=11389
+title=plus operations 7+2 equals 9
+[CHAPTER]
+TIMEBASE=1/1000
+START=11389
+END=12091
+title=minus operations 8-9 equals -1
+[CHAPTER]
+TIMEBASE=1/1000
+START=12104
+END=12796
+title=times operations 9*9 equals 81
+[CHAPTER]
+TIMEBASE=1/1000
+START=12819
+END=13491
+title=divide operations 98/2 equals 49
+[CHAPTER]
+TIMEBASE=1/1000
+START=13487
+END=14167
+title=complex chain 98/2+1 equals 50
